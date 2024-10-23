@@ -3,8 +3,8 @@ Zigbee2MQTT converter for ZTRV-801-EN, Zigbee MOES Tuya Smart TRV [https://www.m
 
 ![Product Photo For Reference](https://cdn.shopifycdn.net/s/files/1/0531/3206/6981/files/1_480x480.png?v=1702610781) 
 ## Guide
-1. (Optional) Change the `fingerprint` section, sometimes the `manufacturerName` change depending on batches, if so pair it in Z2M and note down the `Zigbee Manufacturer` and replace it if it is different.
-2. Copy the file to the `/data` directory
+1. (Optional) Change the `fingerprint` section, sometimes the `manufacturerName` change depending on batches, if so pair it in Zigbee2MQTT and note down the `Zigbee Manufacturer` and replace it if it is different.
+2. Copy the `moes_valve_ZTRV801.js` to your Zigbee2MQTT `/data` directory (Or anywhere as long as Z2M can access it)
 3. Add the relative path to the `external_converters` section in `configuration.yaml`
 ## Troubleshoot
 - Remember to initialize the valve
