@@ -57,6 +57,8 @@ const definition = {
                     'Hysteresis - comfort > switches off/on exactly at reached ' +
                         'temperature with valve smooth from 0 to 100%, eco > 0.5 degrees above or below, valve either 0 or 100%',
                 ),
+            e.enum('display_brightness', ea.STATE_SET, ['high', 'medium', 'low']).withDescription('Display brightness'),
+            e.enum('screen_orientation', ea.STATE_SET, ['up', 'right', 'down', 'left']).withDescription('Screen orientation'),
         ],
         meta: {
             tuyaDatapoints: [
