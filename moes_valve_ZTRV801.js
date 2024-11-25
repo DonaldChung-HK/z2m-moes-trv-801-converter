@@ -59,6 +59,7 @@ const definition = {
                 ),
             e.enum('display_brightness', ea.STATE_SET, ['high', 'medium', 'low']).withDescription('Display brightness'),
             e.enum('screen_orientation', ea.STATE_SET, ['up', 'right', 'down', 'left']).withDescription('Screen orientation'),
+            e.numeric('switch_deviation_eco', ea.STATE_SET ).withValueMin(0.5).withValueMax(5.0).withValueStep(0.1).withUnit('°C'),
         ],
         meta: {
             tuyaDatapoints: [
@@ -89,6 +90,7 @@ const definition = {
                     'up': tuya.enum(0), 'right': tuya.enum(1), 'down': tuya.enum(2), 'left': tuya.enum(3),
                 })],
                 [114, 'mode', tuya.valueConverterBasic.lookup({comfort: tuya.enum(0), eco: tuya.enum(1)})],
+                [115, 'switch_deviation_eco',tuya.valueConverter.divideBy10],
             ],
         },
 
